@@ -1,0 +1,43 @@
+{
+  "name": "js-es6-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node index.js",
+    "start:windows:production": "SET NODE_ENV=production&&babel-node index.js",
+    "start:unix:production": "export NODE_ENV=production&&babel-node index.js",
+    "test": "echo \"Error: no test specified\"&&exit 1",
+    "test:windows:integration": "SET NODE_ENV=test&&mocha --opts test/integration/mocha.opts test/integration/**/*_spec.js",
+    "test:unix:integration": "export NODE_ENV=test&&mocha --opts test/integration/mocha.opts test/integration/**/*_spec.js",
+    "test:unit": "mocha --opts test/unit/mocha.opts test/unit/**/*_spec.js",
+    "lint": "eslint **/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcosrachid/node-js-es6-template.git"
+  },
+  "author": "Marcos Rachid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcosrachid/node-js-es6-template/issues"
+  },
+  "homepage": "https://github.com/marcosrachid/node-js-es6-template#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "config": "^1.28.0",
+    "connect-multiparty": "^2.1.0",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.11.0",
+    "mocha": "^4.0.1",
+    "sinon": "^4.0.2",
+    "supertest": "^3.0.0"
+  }
+}
